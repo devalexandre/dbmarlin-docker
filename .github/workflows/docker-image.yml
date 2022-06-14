@@ -3,8 +3,9 @@ name: Docker Image CI
 on:
   push:
     branches: [ "release" , "latest" , "dev"]
-  merge:
+  pull_request:
     branches: [ "release", "latest" ]
+    types: [closed]
 
 env:
   REGISTRY: ghcr.io
