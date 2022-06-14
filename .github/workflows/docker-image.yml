@@ -3,7 +3,7 @@ name: Docker Image CI
 on:
   push:
     branches: [ "release" , "latest" , "dev"]
-  pull_request:
+  merge:
     branches: [ "release", "latest" ]
 
 env:
