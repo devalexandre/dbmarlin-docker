@@ -2,6 +2,8 @@ FROM ubuntu:latest
 
 WORKDIR /home/app
 
+ENV size=Small
+
 RUN useradd dbmarlin 
 RUN apt update -y
 RUN apt-get install curl inetutils-tools locales -y 
@@ -30,7 +32,7 @@ ENV LC_ALL en_US.UTF-8
 
 USER dbmarlin 
 WORKDIR /home/app/dbmarlin
-RUN ./configure.sh -a True -n 9090 -t 9080 -p 9070 -s Small -u True
+RUN ./configure.sh -a True -n 9090 -t 9080 -p 9070 -s $size -u True
 
 EXPOSE 9070-9090
 
