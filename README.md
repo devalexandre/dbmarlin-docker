@@ -23,7 +23,7 @@ Run
 
 ``` 
 
-docker run -p 9090:9090  --rm  alephp/dbmarlin:release
+docker run -p 9090:9090  -e size=XSmall --rm  alephp/dbmarlin:release
 
 ```
 
